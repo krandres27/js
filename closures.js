@@ -23,3 +23,18 @@ console.log(andresWith30())
 // again, with it remembering its creation scope
 // but aslo addin a new variable avaiable to be included
 console.log(andresWith30('Bogotá'))
+
+(() => {
+  var x, y;
+  var a = 'hola';
+
+  try {
+    throw new Error();
+  } catch (x) {
+    x = 1, y = 2;
+    console.log(x);
+  }
+  console.log(x);
+  console.log(a);
+  console.log(y);
+})();
